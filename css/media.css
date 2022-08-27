@@ -1,0 +1,152 @@
+@media (max-width: 1200px) {
+  [class*=__container] {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  [class*=__container] {
+    max-width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  [class*=__container] {
+    max-width: none;
+    overflow-x: hidden;
+  }
+  .header__container {
+    gap: 50px;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    z-index: 3;
+    height: 40px;
+    width: 40px;
+    background-color: #f16214;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    transition: background-color 0.5s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.5s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.5s ease-in-out, transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  }
+  .header__burger:hover {
+    background-color: transparent;
+  }
+  .header__burger:hover span {
+    background-color: #f16214;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #ffffff;
+    height: 2px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .header__burger span::before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    height: 2px;
+    width: 20px;
+    left: 0;
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  .header__burger span::after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    height: 2px;
+    width: 20px;
+    left: 0;
+    -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .header__burger--active {
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  .header__menu {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    padding: 40px 0;
+    background-color: #ffffff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+            transform: translateY(-200%);
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: -webkit-transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  }
+  .header__menu--active {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .hero {
+    background-position-x: 170px;
+    background-position-y: 0px;
+  }
+  .hero__desc {
+    max-width: 350px;
+  }
+  .hero__feature-list {
+    grid-template-columns: none;
+    grid-template-rows: auto;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .hero__feature-item {
+    margin: 20px 0;
+  }
+  .hero__feature-item:not(:last-child) {
+    border-right: none;
+  }
+  .work {
+    margin-top: 50px;
+  }
+  .work__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .services__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product__list {
+    grid-template-columns: none;
+    grid-template-rows: auto;
+  }
+}
