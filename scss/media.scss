@@ -2,123 +2,188 @@
   [class*="__container"] {
     max-width: 970px;
   }
-}
-@media (max-width: 992px) {
-  [class*="__container"] {
-    max-width: 750px;
-  }
-}
-@media (max-width: 768px) {
-  [class*="__container"] {
-    max-width: none;
-    overflow-x: hidden;
-  }
-  .header {
-    &__container {
-      gap: 50px;
-    }
-    &__burger {
-      display: block;
-      position: relative;
-      z-index: 3;
-      height: 40px;
-      width: 40px;
-      background-color: #f16214;
-      border-radius: 50%;
-      transition: background-color 0.5s ease-in-out, transform 0.6s ease-in-out;
-      &:hover {
-        background-color: transparent;
-        span {
-          background-color: #f16214;
-        }
-      }
-      span {
-        position: absolute;
-        background-color: #ffffff;
-        height: 2px;
-        width: 20px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        &::before {
-          content: "";
-          position: absolute;
-          background-color: inherit;
-          height: 2px;
-          width: 20px;
-          left: 0;
-          transform: translateY(-5px);
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          background-color: inherit;
-          height: 2px;
-          width: 20px;
-          left: 0;
-          transform: translateY(5px);
-        }
-      }
-      &--active {
-        transform: translateX(50%);
-      }
-    }
-    &__menu {
-      position: fixed;
-      width: 100%;
-      left: 0;
+  .app {
+    &__right {
+      right: 0;
       top: 0;
-      z-index: 2;
-      padding: 40px 0;
-      background-color: #ffffff;
-      flex-direction: column;
-      align-items: center;
-      transform: translateY(-200%);
-      transition: transform 0.6s ease-in-out;
-      &--active {
-        transform: none;
+    }
+    &__mobile {
+      max-width: 400px;
+      max-height: 440px;
       }
     }
-  }
-  .hero {
-    background-position-x: 170px;
-    background-position-y: 0px;
-    &__desc {
-      max-width: 350px;
-    }
-    &__feature-list {
-      grid-template-columns: none;
-      grid-template-rows: auto;
-      margin-top: 0;
-      margin-bottom: 50px;
-    }
-    &__feature-item {
-      margin: 20px 0;
-      &:not(:last-child) {
-        border-right: none;
+    .sub {
+      &__img {
+        max-width: 230px;
       }
-    }
-  }
-  .work {
-    margin-top: 50px;
-    &__container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-  }
-  .services {
-    &__list {
-      flex-direction: column;
-    }
-  }
-  .product {
-    &__list {
-      grid-template-columns: none;
-      grid-template-rows: auto;
-    }
   }
 }
+  @media (max-width: 992px) {
+    [class*="__container"] {
+      max-width: 750px;
+    }
+    .app {
+      &__container {
+        padding-bottom: 70px;
+      }
+      &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      &__btn {
+        margin: 0;
+      }
+    }
+    .sub {
+      &__img {
+        display: none;
+      }
+  }
+}
+  @media (max-width: 768px) {
+    [class*="__container"] {
+      max-width: none;
+      overflow-x: hidden;
+    }
+    .header {
+      &__container {
+        gap: 50px;
+      }
+      &__burger {
+        display: block;
+        position: relative;
+        z-index: 3;
+        height: 40px;
+        width: 40px;
+        background-color: #f16214;
+        border-radius: 50%;
+        transition: background-color 0.5s ease-in-out, transform 0.6s ease-in-out;
+        &:hover {
+          background-color: transparent;
+          span {
+            background-color: #f16214;
+          }
+        }
+        span {
+          position: absolute;
+          background-color: #ffffff;
+          height: 2px;
+          width: 20px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          &::before {
+            content: "";
+            position: absolute;
+            background-color: inherit;
+            height: 2px;
+            width: 20px;
+            left: 0;
+            transform: translateY(-5px);
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: inherit;
+            height: 2px;
+            width: 20px;
+            left: 0;
+            transform: translateY(5px);
+          }
+        }
+        &--active {
+          transform: translateX(50%);
+        }
+      }
+      &__menu {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        padding: 40px 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-200%);
+        transition: transform 0.6s ease-in-out;
+        &--active {
+          transform: none;
+        }
+      }
+    }
+    .hero {
+      background-position-x: 170px;
+      background-position-y: 0px;
+      &__desc {
+        max-width: 350px;
+      }
+      &__feature {
+        margin-top: 50px;
+      }
+      &__feature-list {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+        margin-top: 0;
+        margin-bottom: 50px;
+      }
+      &__feature-item {
+        margin: 20px 0;
+        &:not(:last-child) {
+          border-right: none;
+        }
+      }
+    }
+    .work {
+      margin-top: 50px;
+      &__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      &__img {
+        display: none;
+      }
+    }
+    .services {
+      margin-top: 50px;
+      &__list {
+        flex-direction: column;
+        &:last-child {
+          margin-bottom: 100px;
+        }
+      }
+    }
+    .product {
+      margin-top: 0;
+      &__list {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+      }
+    }
+    .app {
+      &__left {
+        align-items: center;
+        justify-content: center;
+      }
+      &__right {
+        display: none;
+      }
+      &__btn {
+        &:not(:last-child) {
+          margin: 0;
+        }
+      }
+    }
+    .reviews {
+      background-image: none;
+      &__content {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+      }
+    }
+  }
 
