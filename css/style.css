@@ -793,7 +793,7 @@ body {
 .sub__title {
   font-weight: 700;
   font-size: clamp(28px, 3.3vw, 40px);
-  line-height: 49px;
+  line-height: 120%;
   color: #FFFFFF;
 }
 .sub__text {
@@ -826,7 +826,124 @@ body {
           transform: translateY(-50%);
   padding: 13px 22px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: clamp(12px, 1.3vw, 16px);
   line-height: 150%;
   color: #FFFFFF;
+}
+
+.footer {
+  background: #F5F5F5;
+  margin-top: 100px;
+}
+.footer__container {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.footer__col:last-child {
+  margin-left: 100px;
+}
+.footer__desc {
+  font-size: 16px;
+  line-height: 150%;
+  color: #888888;
+  max-width: 270px;
+}
+.footer__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 36px;
+}
+.footer__item {
+  font-size: 16px;
+  line-height: 150%;
+  color: #888888;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__address {
+  font-size: 16px;
+  line-height: 150%;
+  color: #888888;
+}
+.footer__tel {
+  font-size: 16px;
+  line-height: 150%;
+  color: #888888;
+}
+.footer__form {
+  margin-top: 20px;
+  max-width: 270px;
+  max-height: 50px;
+  position: relative;
+}
+.footer__input {
+  padding: 12px 19px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.footer__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #F16214;
+  border-radius: 10px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.footer__btn svg {
+  width: 7px;
+  height: 10px;
+}
+.footer__btn svg path {
+  fill: #FFFFFF;
+}
+.footer__btn:hover {
+  background: #fff;
+}
+.footer__btn:hover svg path {
+  fill: #F16214;
+}
+.footer__bottom {
+  margin-top: 70px;
+  border-top: 1.5px solid #DDDDDD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__copyright {
+  font-size: 15px;
+  line-height: 170%;
+  color: #888888;
+  text-align: center;
+  margin-top: 23px;
 }

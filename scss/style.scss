@@ -639,7 +639,7 @@ body {
   &__title {
     font-weight: 700;
     font-size: clamp(28px, 3.3vw, 40px);
-    line-height: 49px;
+    line-height: 120%;
     color: #FFFFFF;
   }
   &__text {
@@ -670,8 +670,115 @@ body {
     transform: translateY(-50%);
     padding: 13px 22px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(12px, 1.3vw, 16px);
     line-height: 150%;
     color: #FFFFFF;
+  }
+}
+
+.footer {
+  background: #F5F5F5;
+  margin-top: 100px;
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  &__col {
+    &:last-child {
+      margin-left: 100px;
+    }
+  }
+  &__desc {
+    font-size: 16px;
+    line-height: 150%;
+    color: #888888;
+    max-width: 270px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    color: #000000;
+    margin-bottom: 36px;
+  }
+  &__item {
+    font-size: 16px;
+    line-height: 150%;
+    color: #888888;
+  }
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__address {
+    font-size: 16px;
+    line-height: 150%;
+    color: #888888;
+  }
+  &__tel {
+    font-size: 16px;
+    line-height: 150%;
+    color: #888888;
+  }
+  &__form {
+    margin-top: 20px;
+    max-width: 270px;
+    max-height: 50px;
+    position: relative;
+  }
+  &__input {
+    padding: 12px 19px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
+  &__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #F16214;
+    border-radius: 10px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    svg {
+      width: 7px;
+      height: 10px;
+      path {
+        fill: #FFFFFF;
+      }
+    }
+    &:hover {
+      background: #fff;
+      svg {
+        path {
+          fill: #F16214;
+        }
+      }
+    }
+  }
+  &__bottom {
+    margin-top: 70px;
+    border-top: 1.5px solid #DDDDDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__copyright {
+    font-size: 15px;
+    line-height: 170%;
+    color: #888888;
+    text-align: center;
+    margin-top: 23px;
   }
 }

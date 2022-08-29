@@ -37,6 +37,19 @@
   .sub__img {
     display: none;
   }
+  .footer__top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__col:last-child {
+    margin-left: 0;
+  }
 }
 @media (max-width: 768px) {
   [class*=__container] {
@@ -214,5 +227,20 @@
   .reviews__content {
     grid-template-columns: none;
     grid-template-rows: auto;
+  }
+  .sub__btn {
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .sub__btn {
+    top: 130%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+    padding: 6px 11px;
+    font-size: 12px;
   }
 }
