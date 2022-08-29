@@ -343,14 +343,14 @@ body {
   }
   &__list-title {
     font-weight: 700;
-    font-size: 26px;
+    font-size: clamp(22px, 2.16vw, 26px);
     line-height: 32px;
     color: #000000;
     margin-top: 44px;
     margin-bottom: 22px;
   }
   &__list-desc {
-    font-size: 16px;
+    font-size: clamp(12px, 1.3vw, 16px);
     line-height: 160%;
     text-align: center;
     color: #888888;
@@ -643,7 +643,7 @@ body {
     color: #FFFFFF;
   }
   &__text {
-    font-size: 16px;
+    font-size: clamp(12px, 1.3vw, 16px);
     line-height: 150%;
     color: #888888;
   }
@@ -673,6 +673,36 @@ body {
     font-size: clamp(12px, 1.3vw, 16px);
     line-height: 150%;
     color: #FFFFFF;
+  }
+  &__btn--tel {
+    display: none;
+    position: absolute; 
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #F16214;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    svg {
+      width: 15px;
+      height: 15px;
+      path {
+        fill: #FFFFFF;
+      }
+    }
+    &:hover {
+      background: #fff;
+      svg {
+        path {
+          fill: #F16214;
+        }
+      }
+    }
   }
 }
 

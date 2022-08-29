@@ -169,6 +169,13 @@
           margin-bottom: 100px;
         }
       }
+      &__item {
+        padding: 35px 20px;
+      }
+      &__list-img {
+        width: 40px;
+        height: 40px;
+      }
     }
     .product {
       margin-top: 0;
@@ -178,9 +185,14 @@
       }
     }
     .app {
+      &__container {
+        padding-bottom: 30px;
+      }
       &__left {
         align-items: center;
         justify-content: center;
+        margin: 0;
+        padding-top: 30px;
       }
       &__right {
         display: none;
@@ -192,6 +204,7 @@
       }
     }
     .reviews {
+      margin-top: 100px;
       background-image: none;
       &__content {
         grid-template-columns: none;
@@ -200,8 +213,12 @@
     }
     .sub {
       &__btn {
+        display: none;
         padding: 6px 11px;
         font-size: 12px;
+      }
+      &__btn--tel {
+        display: block;
       }
     }
   }
@@ -209,12 +226,8 @@
 
   @media (max-width: 320px) {
     .sub {
-      &__btn {
-        top: 130%;
-        right: 50%;
-        transform: translateX(50%);
-        padding: 6px 11px;
-        font-size: 12px;
+      &__content {
+        padding: 25px 35px;
       }
     }
   }
